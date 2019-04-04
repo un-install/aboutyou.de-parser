@@ -8,7 +8,7 @@ public class ParserMain {
 
     public static void flushXml(HttpURLConnection conn){
         //test condition
-        //use flushXml fom utils
+        //use flushXml(productsJsonToXml(...)) fom utils
     }
 
     public static HttpURLConnection getProducts(){
