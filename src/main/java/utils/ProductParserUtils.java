@@ -6,9 +6,8 @@ public class ProductParserUtils {
 
     //by mkharkhu
     //file output method
-    public static void flashXML(){
+    public static void flashXML(String productsXml){
         //use pathFactory here for specify file path
-        //use productsJsonToXml to get xml
     }
 
     //by Yanetta
