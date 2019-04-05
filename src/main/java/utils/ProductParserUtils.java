@@ -7,7 +7,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ProductParserUtils {
 
@@ -18,7 +20,7 @@ public class ProductParserUtils {
     }
 
     //by Yanetta
-    public static String productsJsonToXml(List<ProductResponse> productsResponses) {
+    public static String productResponsesToXml(List<ProductResponse> productsResponses) {
         //List<ProductResponse> to productsXml
         return null;
     }
@@ -33,9 +35,9 @@ public class ProductParserUtils {
     }
 
     //by un-install
-    public static ProductResponse productHtmlParser() throws JSONException, IOException {
+    public static ProductResponse productHtmlParser(String productUrl) throws JSONException, IOException {
         //get html document
-        Document doc = Jsoup.connect("https://www.aboutyou.de/p/converse/chuck-taylor-as-core-ox-sneaker-3565780").get();
+        Document doc = Jsoup.connect(productUrl).get();
 
         //setting values to ProductResponse
         String productJson = doc.body().getElementById("app").getElementsByTag("script").get(1).data();
@@ -49,9 +51,26 @@ public class ProductParserUtils {
         return productResponse;
     }
 
+    //by un-install
+    public static List<String> getSerchResultUrls(String serchUrl) throws IOException {
+        //get html document
+        Document doc = Jsoup.connect(serchUrl).get();
 
+        //get hrefs to products
+        return doc.body().getElementsByAttributeValue("data-test-id", "ProductTileDefault")
+                .stream().map(div -> "https://www.aboutyou.de" + div.getElementsByTag("a").get(0).attr("href")).collect(Collectors.toList());
+    }
 
-
-
-
+    public static List<ProductResponse> getPrdouctResponses(String serchUrl) throws IOException, JSONException {
+        return getSerchResultUrls(serchUrl).stream().map(url -> {
+            try {
+                return productHtmlParser(url);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return new ProductResponse();
+        }).collect(Collectors.toList());
+    }
 }
