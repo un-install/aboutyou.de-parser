@@ -40,14 +40,13 @@ public class ProductParserUtils {
         Document doc = Jsoup.connect(productUrl).get();
 
         //setting values to ProductResponse
-        String productJson = doc.body().getElementById("app").getElementsByTag("script").get(1).data();
+        String productJson = doc.getElementsByAttributeValue("type", "application/ld+json").stream().filter(json -> json.data().contains("\"@type\":\"Product\"")).collect(Collectors.toList()).get(0).data();
         ProductResponse productResponse = new Gson().fromJson(productJson, ProductResponse.class);
         productResponse.setArticleNumber(doc.body().getElementsByClass("_articleNumber_1474d").get(0).text());
         productResponse.setColor(doc.body().getElementsByAttributeValue("data-test-id", "VariantColor").text());
-        productResponse.setPrice(Double.parseDouble(doc.body().getElementsByAttributeValue("data-test-id", "ProductPrices").text().replaceAll("[^\\d,]", "").replace(",", ".")));
+        productResponse.setPrice(doc.body().getElementsByAttributeValue("data-test-id", "ProductPrices").text()); //.replaceAll("[^\\d,]", "").replace(",", ".")));
 
         System.out.println(productResponse);
-
         return productResponse;
     }
 
@@ -73,4 +72,6 @@ public class ProductParserUtils {
             return new ProductResponse();
         }).collect(Collectors.toList());
     }
+
+
 }
