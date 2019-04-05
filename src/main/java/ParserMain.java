@@ -10,6 +10,8 @@ import static utils.ProductParserUtils.*;
 public class ParserMain {
     public static void main(String[] args) throws IOException, JSONException {
         productResponsesToXml(getPrdouctResponses(getSerchResultUrls(args[0])));
+
+     
     }
 }
 
