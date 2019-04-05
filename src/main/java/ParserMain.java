@@ -11,15 +11,5 @@ public class ParserMain {
     public static void main(String[] args) throws IOException, JSONException {
         getPrdouctResponses("https://www.aboutyou.de/suche?term=Shuhe&source=suggest&gender=male&is_s=suggest&is_h=srp").forEach(System.out::println);
     }
-
-    public static void flushXml(HttpURLConnection conn){
-        //test condition
-        //use flushXml(productsJsonToXml(...)) fom utils
-    }
-
-    public static HttpURLConnection getProducts(){
-        //use urlFactory here
-        return null;
-    }
 }
 
