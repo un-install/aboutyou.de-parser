@@ -42,7 +42,7 @@ public class ProductParserUtils {
         String productJson = doc.getElementsByAttributeValue("type", "application/ld+json").stream().
                 filter(json -> json.data().contains("\"@type\":\"Product\"")).collect(Collectors.toList()).get(0).data();
         ProductResponse productResponse = new Gson().fromJson(productJson, ProductResponse.class);
-        productResponse.setArticleNumber(doc.body().getElementsByClass("_articleNumber_1474d").get(0).text());
+        productResponse.setArticleNumber(doc.body().getElementsByClass("_articleNumber_1474d").get(0).text().replace("Artikel-Nr: ", ""));
         productResponse.setColor(doc.body().getElementsByAttributeValue("data-test-id", "VariantColor").text());
         productResponse.setPrice(doc.body().getElementsByAttributeValue("data-test-id", "ProductPrices").text()); //.replaceAll("[^\\d,]", "").replace(",", ".")));
 
