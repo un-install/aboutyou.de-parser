@@ -11,6 +11,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.File;
 import java.io.IOException;
+
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +27,7 @@ public class ProductParserUtils {
     }
 
     //by Yanetta
-    public static String productResponsesToXml(List<ProductResponse> productsResponses) {
+    public static void productResponsesToXml(List<ProductResponse> productsResponses) {
         //List<ProductResponse> to productsXml
         try {
             File file = new File("src/main/resources/test.xml");
@@ -42,18 +43,10 @@ public class ProductParserUtils {
                     e.printStackTrace();
                 }
             });
-//
-//            StringWriter sw = new StringWriter();
-//            jaxbMarshaller.marshal(productsResponses, sw);
-//            String xmlString = sw.toString();
-//            jaxbMarshaller.marshal(productsResponses, System.out);
-//            return xmlString;
 
         } catch (JAXBException e) {
             e.printStackTrace();
         }
-
-        return null;
     }
 
     //by un-install
@@ -71,14 +64,14 @@ public class ProductParserUtils {
         Document doc = Jsoup.connect(productUrl).get();
 
         //setting values to ProductResponse
-        String productJson = doc.body().getElementById("app").getElementsByTag("script").get(1).data();
+        String productJson = doc.getElementsByAttributeValue("type", "application/ld+json").stream().
+                filter(json -> json.data().contains("\"@type\":\"Product\"")).collect(Collectors.toList()).get(0).data();
         ProductResponse productResponse = new Gson().fromJson(productJson, ProductResponse.class);
         productResponse.setArticleNumber(doc.body().getElementsByClass("_articleNumber_1474d").get(0).text());
         productResponse.setColor(doc.body().getElementsByAttributeValue("data-test-id", "VariantColor").text());
-        productResponse.setPrice(Double.parseDouble(doc.body().getElementsByAttributeValue("data-test-id", "ProductPrices").text().replaceAll("[^\\d,]", "").replace(",", ".")));
+        productResponse.setPrice(doc.body().getElementsByAttributeValue("data-test-id", "ProductPrices").text()); //.replaceAll("[^\\d,]", "").replace(",", ".")));
 
-        System.out.println(productResponse);
-
+       // System.out.println(productResponse);
         return productResponse;
     }
 
@@ -92,16 +85,23 @@ public class ProductParserUtils {
                 .stream().map(div -> "https://www.aboutyou.de" + div.getElementsByTag("a").get(0).attr("href")).collect(Collectors.toList());
     }
 
+    //by un-install
     public static List<ProductResponse> getPrdouctResponses(String serchUrl) throws IOException, JSONException {
         return getSerchResultUrls(serchUrl).stream().map(url -> {
             try {
                 return productHtmlParser(url);
             } catch (JSONException e) {
                 e.printStackTrace();
+                return new ProductResponse();
             } catch (IOException e) {
                 e.printStackTrace();
+                return new ProductResponse();
             }
-            return new ProductResponse();
         }).collect(Collectors.toList());
+    }
+
+    //by un-install
+    public static String serchUrlFactory(String keyword) {
+        return "https://www.aboutyou.de/maenner/bekleidung/" + keyword;
     }
 }

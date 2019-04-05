@@ -25,7 +25,6 @@ public class ProductResponse implements Serializable {
     private Double price;
 
     @XmlElement(name = "articleNumber")
-    private String articleNumber;
 
     @XmlElement(name = "color")
     private String color;
@@ -65,7 +64,7 @@ public class ProductResponse implements Serializable {
         this.description = description;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -85,7 +84,7 @@ public class ProductResponse implements Serializable {
         this.color = color;
     }
 
-    public Double getPrice() {
+    public String getPrice() {
         return price;
     }
 

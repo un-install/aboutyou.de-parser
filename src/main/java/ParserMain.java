@@ -13,10 +13,7 @@ import static utils.ProductParserUtils.*;
 //by Daniluko
 public class ParserMain {
     public static void main(String[] args) throws IOException, JSONException {
-        List<ProductResponse> productResponses = new ArrayList<>();
-        productResponses.add(new ProductResponse("name", null, "descreption", 55.3, "articleNumber", "color"));
-        productResponsesToXml(productResponses);
-
+        productResponsesToXml(getPrdouctResponses(getSerchResultUrls(args[0])));
     }
 }
 
