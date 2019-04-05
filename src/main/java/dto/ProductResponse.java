@@ -2,26 +2,48 @@ package dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 //by Yanetta and un-install
 //Product response pojo
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "ProductResponse")
 public class ProductResponse implements Serializable {
+    @XmlElement(name = "name")
     private String name;
+
+    //@XmlElementWrapper(name = "brand")
+    @XmlElement(name = "brand")
     private Brand brand;
+
+    @XmlElement(name = "description")
     private String description;
-    private String price;
-    private String articleNumber;
+
+    @XmlElement(name = "price")
+    private Double price;
+
+    @XmlElement(name = "articleNumber")
+
+    @XmlElement(name = "color")
     private String color;
 
     public ProductResponse() {
     }
 
+    public ProductResponse(String name, Brand brand, String description, Double price, String articleNumber, String color) {
+        this.name = name;
+        this.brand = brand;
+        this.description = description;
+        this.price = price;
+        this.articleNumber = articleNumber;
+        this.color = color;
+    }
+
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

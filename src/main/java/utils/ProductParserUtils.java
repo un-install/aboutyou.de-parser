@@ -6,7 +6,15 @@ import org.json.JSONException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import java.io.File;
 import java.io.IOException;
+
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,9 +27,26 @@ public class ProductParserUtils {
     }
 
     //by Yanetta
-    public static String productResponsesToXml(List<ProductResponse> productsResponses) {
+    public static void productResponsesToXml(List<ProductResponse> productsResponses) {
         //List<ProductResponse> to productsXml
-        return null;
+        try {
+            File file = new File("src/main/resources/test.xml");
+            //check class of instance
+            JAXBContext jaxbContext = JAXBContext.newInstance(ProductResponse.class);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            productsResponses.forEach(pr -> {
+                try {
+                    jaxbMarshaller.marshal( pr, file);
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                }
+            });
+
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
     }
 
     //by un-install

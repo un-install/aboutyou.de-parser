@@ -1,9 +1,14 @@
 package dto;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import java.io.Serializable;
 
 //by un-install
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Brand implements Serializable {
+    @XmlAttribute
     private String name;
 
     public Brand() {
