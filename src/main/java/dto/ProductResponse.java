@@ -22,9 +22,10 @@ public class ProductResponse implements Serializable {
     private String description;
 
     @XmlElement(name = "price")
-    private Double price;
+    private String price;
 
     @XmlElement(name = "articleNumber")
+    private String articleNumber;
 
     @XmlElement(name = "color")
     private String color;
@@ -32,7 +33,7 @@ public class ProductResponse implements Serializable {
     public ProductResponse() {
     }
 
-    public ProductResponse(String name, Brand brand, String description, Double price, String articleNumber, String color) {
+    public ProductResponse(String name, Brand brand, String description, String price, String articleNumber, String color) {
         this.name = name;
         this.brand = brand;
         this.description = description;
