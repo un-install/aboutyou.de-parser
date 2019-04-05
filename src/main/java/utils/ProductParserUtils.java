@@ -11,7 +11,7 @@ public class ProductParserUtils {
     }
 
     //by Yanetta
-    public static String productsJsonToXml(BufferedReader productsJson){
+    public static String productsJsonToXml(String productsJson){
         //productsJson to List<ProductResponse>
         //List<ProductResponse> to productsXml
         return null;
