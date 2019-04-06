@@ -1,11 +1,14 @@
 package utils;
 
 import com.google.gson.Gson;
+import dto.ProductContainer;
 import dto.ProductResponse;
 import org.json.JSONException;
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.FormElement;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -19,52 +22,59 @@ public class ProductParserUtils {
     //by Yanetta and mkharkhu
     public static void productResponsesToXml(List<ProductResponse> productsResponses) {
         try {
-            FileWriter file = new FileWriter("src/main/resources/test.xml");
-            BufferedWriter bufferedWriter = new BufferedWriter(file);
-            JAXBContext jaxbContext = JAXBContext.newInstance(ProductResponse.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(ProductContainer.class);
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-            StringWriter stringWriter = new StringWriter();
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            productsResponses.forEach(pr -> {
-                try {
-                    jaxbMarshaller.marshal(pr, stringWriter);
-                } catch (JAXBException e) {
-                    e.printStackTrace();
-                }
-            });
-            bufferedWriter.write(stringWriter.toString());
+            jaxbMarshaller.marshal(new ProductContainer(productsResponses), fileFactory("xml"));
 
-        } catch (JAXBException | IOException e) {
+        } catch (JAXBException | IOException  e) {
             e.printStackTrace();
         }
     }
 
     //by un-install
-    public static String pathFactory() {
-        if (System.getProperty("os.name").equals("Windows 10")) {
-            return "C:\\apbutyou.de-parser\\resources\\test.xml";
+    public static File fileFactory(String type) throws IOException {
+        if (System.getProperty("os.name").contains("Windows")) {
+            return checkedCreate("C:\\aboutyou.de-parser\\output\\out." + type);
         } else {
-            return "/etc/xml-out";
+            return checkedCreate("/etc/aboutyou.de-parser/output/out." + type);
         }
+    }
+
+    public static File checkedCreate(String filePath) throws IOException {
+        File outFile = new File(filePath);
+        if (!outFile.exists()) {
+            File outDir = new File(outFile.getParent());
+            if (!outDir.exists()) {
+                outDir.mkdirs();
+            }
+            outFile.createNewFile();
+        }
+        return outFile;
     }
 
     //by un-install
     public static ProductResponse productHtmlParser(String productUrl) throws JSONException, IOException {
         //get html document
         Document doc = Jsoup.connect(productUrl).get();
-        System.out.println(productUrl);
-        //setting values to ProductResponse
+        ProductResponse productResponse;
+
+        //check json
         List<Element> jsons = doc.getElementsByAttributeValue("type", "application/ld+json");
-        if (!jsons.stream().anyMatch(json -> json.data().contains("\"@type\":\"Product\""))) {
-            return new ProductResponse();
+        if (jsons.stream().anyMatch(json -> json.data().contains("\"@type\":\"Product\""))) {
+
+            //setting values to ProductResponse from json
+            String productJson = jsons.stream().
+                    filter(json -> json.data().contains("\"@type\":\"Product\"")).collect(Collectors.toList()).get(0).data();
+            productResponse = new Gson().fromJson(productJson, ProductResponse.class);
+
+            //setting values to ProductResponse from html
+            productResponse.setArticleNumber(doc.body().getElementsByClass("_articleNumber_1474d").get(0).text().replace("Artikel-Nr: ", ""));
+            productResponse.setColor(doc.body().getElementsByAttributeValue("data-test-id", "VariantColor").text());
+            productResponse.setPrice(doc.body().getElementsByAttributeValue("data-test-id", "ProductPrices").text()); //.replaceAll("[^\\d,]", "").replace(",", ".")));
+        } else {
+            productResponse = new ProductResponse();
         }
-        String productJson = jsons.stream().
-                filter(json -> json.data().contains("\"@type\":\"Product\"")).collect(Collectors.toList()).get(0).data();
-        ProductResponse productResponse = new Gson().fromJson(productJson, ProductResponse.class);
-        System.out.println(productJson);
-        productResponse.setArticleNumber(doc.body().getElementsByClass("_articleNumber_1474d").get(0).text().replace("Artikel-Nr: ", ""));
-        productResponse.setColor(doc.body().getElementsByAttributeValue("data-test-id", "VariantColor").text());
-        productResponse.setPrice(doc.body().getElementsByAttributeValue("data-test-id", "ProductPrices").text()); //.replaceAll("[^\\d,]", "").replace(",", ".")));
 
         System.out.println(productResponse);
         return productResponse;
@@ -85,10 +95,7 @@ public class ProductParserUtils {
         return getSerchResultUrls(serchUrl).stream().map(url -> {
             try {
                 return productHtmlParser(url);
-            } catch (JSONException e) {
-                e.printStackTrace();
-                return new ProductResponse();
-            } catch (IOException e) {
+            } catch (IOException | JSONException e) {
                 e.printStackTrace();
                 return new ProductResponse();
             }
@@ -96,7 +103,15 @@ public class ProductParserUtils {
     }
 
     //by un-install
-    public static String serchUrlFactory(String keyword) {
-        return "https://www.aboutyou.de/maenner/bekleidung/" + keyword;
+    public static String serchUrlFactory(String keyword) throws IOException {
+        Document doc = Jsoup.connect("https://www.aboutyou.de").followRedirects(true).data("_textInput_f8463 _textInputActive_f8463", keyword).post();
+
+        FormElement serchForm = doc.getElementsByClass("_searchBarForm_f8463").forms().get(0);
+        serchForm.val(keyword);
+        Connection conn = serchForm.submit();
+        conn.followRedirects(true);
+
+        return "https://www.aboutyou.de/maenner/bekleidung/jeans?is_s=suggest&is_h=gz&term=jeans&category=20202";
     }
+
 }

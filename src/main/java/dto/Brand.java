@@ -24,8 +24,9 @@ public class Brand implements Serializable {
 
     @Override
     public String toString() {
-        return "Brand{" +
-                "name='" + name + '\'' +
-                '}';
+        final StringBuffer sb = new StringBuffer("Brand{");
+        sb.append("name='").append(name).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

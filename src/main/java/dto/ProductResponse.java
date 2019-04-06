@@ -5,11 +5,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 //by Yanetta and un-install
 //Product response pojo
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "ProductResponse")
 public class ProductResponse implements Serializable {
     @XmlElement(name = "name")
     private String name;
@@ -29,6 +29,13 @@ public class ProductResponse implements Serializable {
 
     @XmlElement(name = "color")
     private String color;
+
+    @XmlElement(name = "url")
+    private String url;
+
+    @XmlElementWrapper(name = "images")
+    @XmlElement(name = "image")
+    private List<String> image;
 
     public ProductResponse() {
     }
@@ -89,15 +96,34 @@ public class ProductResponse implements Serializable {
         return price;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public List<String> getImage() {
+        return image;
+    }
+
+    public void setImage(List<String> image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
-        return "ProductResponse{" +
-                "name='" + name + '\'' +
-                ", brand=" + brand +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                ", articleNumber='" + articleNumber + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        final StringBuffer sb = new StringBuffer("ProductResponse{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", brand=").append(brand);
+        sb.append(", description='").append(description).append('\'');
+        sb.append(", price='").append(price).append('\'');
+        sb.append(", articleNumber='").append(articleNumber).append('\'');
+        sb.append(", color='").append(color).append('\'');
+        sb.append(", url='").append(url).append('\'');
+        sb.append(", image='").append(image).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }
