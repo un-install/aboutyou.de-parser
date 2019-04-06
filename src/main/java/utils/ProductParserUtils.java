@@ -10,39 +10,31 @@ import org.jsoup.nodes.Element;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ProductParserUtils {
 
-    //by mkharkhu
-    //file output method
-    public static void flashXML(String productsXml){
-        //use pathFactory here for specify file path
-    }
-
-    //by Yanetta
+    //by Yanetta and mkharkhu
     public static void productResponsesToXml(List<ProductResponse> productsResponses) {
-        //List<ProductResponse> to productsXml
         try {
-            File file = new File("src/main/resources/test.xml");
-            //check class of instance
+            FileWriter file = new FileWriter("src/main/resources/test.xml");
+            BufferedWriter bufferedWriter = new BufferedWriter(file);
             JAXBContext jaxbContext = JAXBContext.newInstance(ProductResponse.class);
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-
+            StringWriter stringWriter = new StringWriter();
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             productsResponses.forEach(pr -> {
                 try {
-                    jaxbMarshaller.marshal( pr, file);
+                    jaxbMarshaller.marshal(pr, stringWriter);
                 } catch (JAXBException e) {
                     e.printStackTrace();
                 }
             });
+            bufferedWriter.write(stringWriter.toString());
 
-        } catch (JAXBException e) {
+        } catch (JAXBException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -50,7 +42,7 @@ public class ProductParserUtils {
     //by un-install
     public static String pathFactory() {
         if (System.getProperty("os.name").equals("Windows 10")) {
-            return "C:\\apbutyou.de-parser\\xml-out";
+            return "C:\\apbutyou.de-parser\\resources\\test.xml";
         } else {
             return "/etc/xml-out";
         }

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ProductResponse>
+    <name>Slim Fit Jeans 'TIM ORIGINAL AM 653 LID'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Slim Fit Jeans 'TIM ORIGINAL AM 653 LID' in blue denim</description>
+    <price>39,99€</price>
+    <articleNumber>5713722931310</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
     <name>Jeans 'LOOM BLUE JOG PK 8472 NOOS'</name>
     <brand name="Only &amp; Sons"/>
     <description>Only &amp; Sons Jeans 'LOOM BLUE JOG PK 8472 NOOS' in blue denim</description>
@@ -7,3 +16,770 @@
     <articleNumber>ONS0376001000011</articleNumber>
     <color>blue denim</color>
 </ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JOSH'</name>
+    <brand name="TOM TAILOR"/>
+    <description>TOM TAILOR Jeans 'JOSH' in blue denim</description>
+    <price>49,90€</price>
+    <articleNumber>TOT2536001000018</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJGlenn Original JJ 887'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJGlenn Original JJ 887' in blau</description>
+    <price>69,90€</price>
+    <articleNumber>JAC0230001013010</articleNumber>
+    <color>blau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans in Used-Optik 'Hatch'</name>
+    <brand name="Pepe Jeans"/>
+    <description>Pepe Jeans Jeans in Used-Optik 'Hatch' in blau</description>
+    <price>94,90€</price>
+    <articleNumber>PEP0121007005000</articleNumber>
+    <color>blau black denim blue denim blue denim blue denim blue denim blue denim blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Röhrenjeans 'Liam'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Röhrenjeans 'Liam' in grey denim</description>
+    <price>ab 49,90€</price>
+    <articleNumber>JAC0333002007000</articleNumber>
+    <color>grey denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'TIM ORIGINAL CR 010'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'TIM ORIGINAL CR 010' in grey denim</description>
+    <price>39,99€</price>
+    <articleNumber>5713616345544</articleNumber>
+    <color>grey denim blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Röhrenjeans 'Liam'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Röhrenjeans 'Liam' in schwarz</description>
+    <price>ab 49,90€</price>
+    <articleNumber>JAC0333001007000</articleNumber>
+    <color>schwarz</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Glenn Original AM 815'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'Glenn Original AM 815' in blue denim</description>
+    <price>ab 39,90€</price>
+    <articleNumber>JAC1942001000016</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJITOM JJORIGINAL AM 815 NOOS'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJITOM JJORIGINAL AM 815 NOOS' in blue denim</description>
+    <price>ab 39,90€</price>
+    <articleNumber>JAC1485001000014</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'WEFT MED BLUE 5076 PK'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'WEFT MED BLUE 5076 PK' in blau</description>
+    <price>39,90€</price>
+    <articleNumber>ONS0254001011000</articleNumber>
+    <color>blau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Röhrenjeans 'Liam'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Röhrenjeans 'Liam' in blue denim</description>
+    <price>49,90€</price>
+    <articleNumber>JAC0333003008000</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Glenn Original AM 814 Noos'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'Glenn Original AM 814 Noos' in blue denim</description>
+    <price>ab 39,90€</price>
+    <articleNumber>5713757037629</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJIGLENN JJORIGINAL JOS 875 NOOS'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJIGLENN JJORIGINAL JOS 875 NOOS' in blue denim</description>
+    <price>69,90€</price>
+    <articleNumber>JAC0574001000010</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans in black denim</description>
+    <price>59,90€</price>
+    <articleNumber>JAC1366001000010</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans '3301 Straight'</name>
+    <brand name="G-STAR RAW"/>
+    <description>G-STAR RAW Jeans '3301 Straight' in dunkelblau</description>
+    <price>99,90€</price>
+    <articleNumber>GST0158010007000</articleNumber>
+    <color>dunkelblau blue denim blue denim blue denim dunkelblau blue denim blue denim dunkelblau dunkelblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsWARP GREY PK 2204'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsWARP GREY PK 2204' in grey denim</description>
+    <price>29,90€</price>
+    <articleNumber>ONS0881001000011</articleNumber>
+    <color>grey denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Tight'</name>
+    <brand name="CHEAP MONDAY"/>
+    <description>CHEAP MONDAY Jeans 'Tight' in blau</description>
+    <price>49,90€</price>
+    <articleNumber>CPM0018004007000</articleNumber>
+    <color>blau white denim blue denim blue denim schwarz black denim blue denim blue denim blue denim blue denim dunkelgrau blue denim grey denim dunkelblau blau blau schwarz grau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'WARP'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'WARP' in black denim</description>
+    <price>ab 29,90€</price>
+    <articleNumber>5713759224621</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Clark Original'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'Clark Original' in blue denim</description>
+    <price>69,90€</price>
+    <articleNumber>JAC0625001000011</articleNumber>
+    <color>blue denim dunkelblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'LOOM'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'LOOM' in blue denim</description>
+    <price>59,90€</price>
+    <articleNumber>ONS0936001000012</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Loom'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'Loom' in hellblau</description>
+    <price>39,90€</price>
+    <articleNumber>ONS0945001000011</articleNumber>
+    <color>hellblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsLOOM BLACK DCC 0448 NOOS'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsLOOM BLACK DCC 0448 NOOS' in black denim</description>
+    <price>39,90€</price>
+    <articleNumber>ONS0833001000012</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'WARP BLUE BLACK'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'WARP BLUE BLACK' in blue denim</description>
+    <price>29,90€</price>
+    <articleNumber>ONS0944001000009</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'SERVANDO X'</name>
+    <brand name="LTB"/>
+    <description>LTB Jeans 'SERVANDO X' in blue denim</description>
+    <price>89,90€</price>
+    <articleNumber>LTB0499006000014</articleNumber>
+    <color>blue denim grey denim grey denim blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans in Slim Fit 'Arc 3D'</name>
+    <brand name="G-STAR RAW"/>
+    <description>G-STAR RAW Jeans in Slim Fit 'Arc 3D' in blau / dunkelblau</description>
+    <price>129,00€</price>
+    <articleNumber>GST0012012011018</articleNumber>
+    <color>blau / dunkelblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsWARP BLUE PK 3028'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsWARP BLUE PK 3028' in blue denim</description>
+    <price>29,90€</price>
+    <articleNumber>ONS0827001000010</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans in blue denim</description>
+    <price>59,90€</price>
+    <articleNumber>JAC1050001000017</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJIGLENN JJFELIX AM 046 LID NOOS'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJIGLENN JJFELIX AM 046 LID NOOS' in schwarz</description>
+    <price>ab 59,90€</price>
+    <articleNumber>JAC0576001000012</articleNumber>
+    <color>schwarz</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'LIAM JJORIGINAL'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'LIAM JJORIGINAL' in black denim</description>
+    <price>69,90€</price>
+    <articleNumber>JAC1659001000009</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsLOOM JOG DK BLUE PK 0431 NOOS'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsLOOM JOG DK BLUE PK 0431 NOOS' in blue denim</description>
+    <price>39,90€</price>
+    <articleNumber>ONS0662001000012</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'WARP GREY P PK 8808 NOOS'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'WARP GREY P PK 8808 NOOS' in grey denim</description>
+    <price>29,90€</price>
+    <articleNumber>ONS0380001000012</articleNumber>
+    <color>grey denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'IGLENN'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'IGLENN' in black denim</description>
+    <price>39,90€</price>
+    <articleNumber>JAC1941001000013</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Skinny Jeans 'Morten'</name>
+    <brand name="tigha"/>
+    <description>tigha Skinny Jeans 'Morten' in schwarz</description>
+    <price>129,00€</price>
+    <articleNumber>TIG0166002000006</articleNumber>
+    <color>schwarz blue denim rauchblau blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Bootcut-Jeans 'Jacksville'</name>
+    <brand name="WRANGLER"/>
+    <description>WRANGLER Bootcut-Jeans 'Jacksville' in blue denim</description>
+    <price>89,90€ 99,95€</price>
+    <articleNumber>629319354</articleNumber>
+    <color>blue denim schwarz</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsWARP BLACK P PK 8822 NOOS'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsWARP BLACK P PK 8822 NOOS' in black denim</description>
+    <price>29,90€</price>
+    <articleNumber>ONS0382001000009</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Revend Super Slim'</name>
+    <brand name="G-STAR RAW"/>
+    <description>G-STAR RAW Jeans 'Revend Super Slim' in grau</description>
+    <price>99,90€</price>
+    <articleNumber>GST0164002006000</articleNumber>
+    <color>grau blue denim black denim black denim blue denim dunkelblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans in blue denim</description>
+    <price>34,90€</price>
+    <articleNumber>ONS1071001000012</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsLOOM BLUE WASHED LD PK 0897'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsLOOM BLUE WASHED LD PK 0897' in blue denim</description>
+    <price>ab 44,90€ 49,90€</price>
+    <articleNumber>ONS0696001000006</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans in blue denim</description>
+    <price>39,90€</price>
+    <articleNumber>ONS1141001000011</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans in blue denim</description>
+    <price>ab 29,90€</price>
+    <articleNumber>ONS0880001000011</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsLOOM 306 BLACK DENIM EXP'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsLOOM 306 BLACK DENIM EXP' in black denim</description>
+    <price>29,90€ 39,90€</price>
+    <articleNumber>ONS0924001000012</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJIGLENN JJORIGINAL JOS 645 I.K. NOOS'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJIGLENN JJORIGINAL JOS 645 I.K. NOOS' in blue denim</description>
+    <price>ab 69,90€ 79,90€</price>
+    <articleNumber>JAC0622001000011</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="TOM TAILOR DENIM"/>
+    <description>TOM TAILOR DENIM Jeans in blue denim</description>
+    <price>49,99€</price>
+    <articleNumber>1011663024</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>5-Pocket-Jeans 'Newbill'</name>
+    <brand name="REPLAY"/>
+    <description>REPLAY 5-Pocket-Jeans 'Newbill' in blue denim</description>
+    <price>ab 95,99€</price>
+    <articleNumber>655283735</articleNumber>
+    <color>blue denim blue denim blue denim dunkelblau blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Slim-fit-Jeans 'Anbass'</name>
+    <brand name="REPLAY"/>
+    <description>REPLAY Slim-fit-Jeans 'Anbass' in schwarz</description>
+    <price>ab 96,99€ 149,99€</price>
+    <articleNumber>612001800</articleNumber>
+    <color>schwarz blue denim blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>'Loose-fit' Jeans</name>
+    <brand name="CAMP DAVID"/>
+    <description>CAMP DAVID 'Loose-fit' Jeans in blue denim</description>
+    <price>ab 96,99€</price>
+    <articleNumber>804051961</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="BRUNO BANANI"/>
+    <description>BRUNO BANANI Jeans in blue denim</description>
+    <price>79,99€</price>
+    <articleNumber>576602193</articleNumber>
+    <color>blue denim blue denim schwarz schwarz schwarz schwarz schwarz schwarz blue denim blue denim blue denim blau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Josh'</name>
+    <brand name="TOM TAILOR"/>
+    <description>TOM TAILOR Jeans 'Josh' in blue denim</description>
+    <price>39,99€</price>
+    <articleNumber>1011163016</articleNumber>
+    <color>blue denim grey denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'TOM ORIGINAL JOS 510 50SPS NOOS'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'TOM ORIGINAL JOS 510 50SPS NOOS' in blue denim</description>
+    <price>59,90€</price>
+    <articleNumber>JAC2178001000012</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Culver'</name>
+    <brand name="TOM TAILOR DENIM"/>
+    <description>TOM TAILOR DENIM Jeans 'Culver' in black denim</description>
+    <price>49,99€</price>
+    <articleNumber>1008313011</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Marvin'</name>
+    <brand name="TOM TAILOR"/>
+    <description>TOM TAILOR Jeans 'Marvin' in blue denim</description>
+    <price>ab 59,90€</price>
+    <articleNumber>TOT4454002000011</articleNumber>
+    <color>blue denim ultramarinblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'HATCH'</name>
+    <brand name="Pepe Jeans"/>
+    <description>Pepe Jeans Jeans 'HATCH' in blue denim</description>
+    <price>ab 89,95€</price>
+    <articleNumber>ART101426-008</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="HOLLISTER"/>
+    <description>HOLLISTER Jeans in blue denim</description>
+    <price>59,90€</price>
+    <articleNumber>HOL0430001000004</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJITIM JJORIGINAL AM 815'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJITIM JJORIGINAL AM 815' in blue denim</description>
+    <price>39,90€</price>
+    <articleNumber>JAC1530001000003</articleNumber>
+    <color>blue denim grey denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Piers'</name>
+    <brand name="TOM TAILOR DENIM"/>
+    <description>TOM TAILOR DENIM Jeans 'Piers' in grau</description>
+    <price>39,99€</price>
+    <articleNumber>1010799037</articleNumber>
+    <color>grau dunkelblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJIGLENN JJORIGINAL JOS 118 ID.K NOOS'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJIGLENN JJORIGINAL JOS 118 ID.K NOOS' in blue denim</description>
+    <price>89,99€</price>
+    <articleNumber>5713616330588</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Bruno'</name>
+    <brand name="MAGIC FOX x ABOUT YOU"/>
+    <description>MAGIC FOX x ABOUT YOU Jeans 'Bruno' in blue denim</description>
+    <price>69,90€</price>
+    <articleNumber>MFX0008001000001</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="BLEND"/>
+    <description>BLEND Jeans in blue denim</description>
+    <price>59,90€</price>
+    <articleNumber>LND0161002000002</articleNumber>
+    <color>blue denim blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="HOLLISTER"/>
+    <description>HOLLISTER Jeans in hellblau</description>
+    <price>59,90€</price>
+    <articleNumber>HOL0435001000001</articleNumber>
+    <color>hellblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse/>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="ESPRIT"/>
+    <description>ESPRIT Jeans in grey denim</description>
+    <price>49,90€</price>
+    <articleNumber>ESR3371001000001</articleNumber>
+    <color>grey denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Rebel Pant'</name>
+    <brand name="Carhartt WIP"/>
+    <description>Carhartt WIP Jeans 'Rebel Pant' in dunkelgrau</description>
+    <price>89,95€</price>
+    <articleNumber>469306000072</articleNumber>
+    <color>dunkelgrau blue denim grey denim black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans '3301 Slim'</name>
+    <brand name="G-STAR RAW"/>
+    <description>G-STAR RAW Jeans '3301 Slim' in blue denim</description>
+    <price>129,00€</price>
+    <articleNumber>GST0213035000012</articleNumber>
+    <color>blue denim blue denim blue denim blue denim blue denim grey denim black denim blue denim blue denim blue denim blue denim schwarz grey denim blue denim blue denim grey denim blue denim hellblau blau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans '3301 Tapered'</name>
+    <brand name="G-STAR RAW"/>
+    <description>G-STAR RAW Jeans '3301 Tapered' in blau</description>
+    <price>ab 96,99€</price>
+    <articleNumber>GST0375012010015</articleNumber>
+    <color>blau blue denim hellblau blue denim blue denim blue denim blue denim blue denim dunkelblau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="CHEAP MONDAY"/>
+    <description>CHEAP MONDAY Jeans in schwarz</description>
+    <price>49,90€</price>
+    <articleNumber>CPM0018027010000</articleNumber>
+    <color>schwarz white denim blue denim blue denim schwarz black denim blue denim blue denim blue denim blue denim dunkelgrau blue denim grey denim dunkelblau blau blau grau blau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Regular fit Jeans 'JJITIM JJORIGINAL'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Regular fit Jeans 'JJITIM JJORIGINAL' in blau</description>
+    <price>79,99€</price>
+    <articleNumber>5713028700559</articleNumber>
+    <color>blau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Clark Original'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'Clark Original' in dunkelblau</description>
+    <price>ab 69,90€</price>
+    <articleNumber>5712419745957</articleNumber>
+    <color>dunkelblau blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsWARP BLACK WASHED LD PK 0899'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsWARP BLACK WASHED LD PK 0899' in black denim</description>
+    <price>49,90€</price>
+    <articleNumber>ONS0698001000012</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans im Used-Style 'Anbass'</name>
+    <brand name="REPLAY"/>
+    <description>REPLAY Jeans im Used-Style 'Anbass' in dunkelblau</description>
+    <price>99,90€</price>
+    <articleNumber>REP0126018012004</articleNumber>
+    <color>dunkelblau blue denim blue denim / hellblau schwarz schwarz blue denim blue denim dunkelblau blue denim white denim blue denim blue denim black denim grau</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans in blue denim</description>
+    <price>ab 49,90€</price>
+    <articleNumber>5713751978096</articleNumber>
+    <color>blue denim blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJIGLENN JJFELIX AM 458 PCW SPS NOOS'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJIGLENN JJFELIX AM 458 PCW SPS NOOS' in black denim</description>
+    <price>69,99€</price>
+    <articleNumber>5713615636568</articleNumber>
+    <color>black denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsLOOM BLUE WASHED PK 4478'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsLOOM BLUE WASHED PK 4478' in blue denim</description>
+    <price>39,90€</price>
+    <articleNumber>ONS1140001000012</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Stretch-Jeans'</name>
+    <brand name="Q/S designed by"/>
+    <description>Q/S designed by Jeans 'Stretch-Jeans' in navy</description>
+    <price>ab 49,90€</price>
+    <articleNumber>QSB0466001000007</articleNumber>
+    <color>navy</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'NOOS - JJILIAM JJORIGINAL AM 792 50SPS NOOS'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'NOOS - JJILIAM JJORIGINAL AM 792 50SPS NOOS' in blue denim</description>
+    <price>49,90€</price>
+    <articleNumber>JAC1648001000013</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans in blue denim</description>
+    <price>ab 79,90€</price>
+    <articleNumber>JAC1645001000017</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsWEFT WASHED PK 2041 NOOS'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsWEFT WASHED PK 2041 NOOS' in blue denim</description>
+    <price>39,90€</price>
+    <articleNumber>ONS0839001000012</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'OCS 5 pkt den p'</name>
+    <brand name="ESPRIT"/>
+    <description>ESPRIT Jeans 'OCS 5 pkt den p' in blue denim</description>
+    <price>ab 48,99€</price>
+    <articleNumber>813201295</articleNumber>
+    <color>blue denim blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans '510™ SKINNY FIT'</name>
+    <brand name="LEVI'S"/>
+    <description>LEVI'S Jeans '510™ SKINNY FIT' in black denim</description>
+    <price>99,90€</price>
+    <articleNumber>LEV0185003000010</articleNumber>
+    <color>black denim blue denim grey denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans in blue denim</description>
+    <price>29,90€</price>
+    <articleNumber>ONS1070001000012</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Piers'</name>
+    <brand name="TOM TAILOR DENIM"/>
+    <description>TOM TAILOR DENIM Jeans 'Piers' in blue denim</description>
+    <price>49,90€</price>
+    <articleNumber>TTD0782002001000</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Comfort Fit Jeans 'MIKE ORG JOS 097'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Comfort Fit Jeans 'MIKE ORG JOS 097' in blue denim</description>
+    <price>79,90€</price>
+    <articleNumber>JAC0546001000013</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans in blue denim</description>
+    <price>49,90€</price>
+    <articleNumber>ONS0940001000001</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans '512™'</name>
+    <brand name="LEVI'S"/>
+    <description>LEVI'S Jeans '512™' in black denim</description>
+    <price>99,90€</price>
+    <articleNumber>LEV0039010000012</articleNumber>
+    <color>black denim hellblau blue denim blue denim blue denim blue denim grey denim blue denim blue denim blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'LIAM ORIGINAL'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'LIAM ORIGINAL' in blue denim</description>
+    <price>59,90€</price>
+    <articleNumber>JAC1657001000012</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'onsLOOM MED BLUE DENIM 2058 EXP'</name>
+    <brand name="Only &amp; Sons"/>
+    <description>Only &amp; Sons Jeans 'onsLOOM MED BLUE DENIM 2058 EXP' in blue denim</description>
+    <price>39,90€</price>
+    <articleNumber>ONS0925001000011</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'JJIMIKE'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'JJIMIKE' in blue denim</description>
+    <price>ab 79,90€</price>
+    <articleNumber>JAC1652001000011</articleNumber>
+    <color>blue denim</color>
+</ProductResponse>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProductResponse>
+    <name>Jeans 'Tim'</name>
+    <brand name="JACK &amp; JONES"/>
+    <description>JACK &amp; JONES Jeans 'Tim' in blue denim</description>
+    <price>ab 79,90€</price>
+    <articleNumber>JAC0231001005000</articleNumber>
+    <color>blue denim</color>
+</ProductR
