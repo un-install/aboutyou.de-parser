@@ -84,7 +84,6 @@ public class ProductParserUtils {
         //collecting jsons
         List<Element> productJson = doc.body().getElementsByAttributeValue("type", "application/ld+json").stream().
                 filter(json -> json.data().contains("\"Product\"")).collect(Collectors.toList());
-        LOG.debug("productJson={}", productJson);
 
         //check json
         if (!productJson.isEmpty()) {
@@ -132,7 +131,7 @@ public class ProductParserUtils {
     public static List<ProductResponse> getProductResponses(String searchUrl) throws IOException {
         LOG.debug("start getProductResponses, searchUrl=" + searchUrl);
         //map productUrl to productResponse
-        List<ProductResponse> productResponses = getSearchResultUrls(searchUrl).stream()
+        List<ProductResponse> productResponses = getSearchResultUrls(searchUrl).stream().parallel()
                 .map(url -> {
                     try {
                         return productHtmlParser(url);
@@ -192,7 +191,8 @@ public class ProductParserUtils {
     }
 
     //by un-install
-    public static List<ProductResponse> getProductResponsesWithPagination(List<String> pageUrls, String keyword) {
+    public static List<ProductResponse> getProductResponsesWithPagination(List<String> pageUrls) {
+        LOG.debug("start getProductResponsesWithPagination, pageUrls", pageUrls);
         return pageUrls.stream().map(url -> {
             try {
                 return getProductResponses(url);
