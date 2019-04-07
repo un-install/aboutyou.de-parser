@@ -185,7 +185,7 @@ public class ProductParserUtils {
         String url = lastPaggButton.attr("href");
 
         AtomicInteger count = new AtomicInteger(2);
-        pageUrls.addAll(Stream.generate(() -> "https://www.aboutyou.de" + url.split("=")[0] + "=" + count.getAndIncrement()).limit(1).collect(Collectors.toList()));
+        pageUrls.addAll(Stream.generate(() -> "https://www.aboutyou.de" + url.split("=")[0] + "=" + count.getAndIncrement()).limit(pcount - 1).collect(Collectors.toList()));
         LOG.debug("end getPageList, pageUrls={}", pageUrls);
         return pageUrls;
     }
