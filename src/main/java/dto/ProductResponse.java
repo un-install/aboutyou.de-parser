@@ -1,10 +1,7 @@
 package dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.List;
 
 //by Yanetta and un-install

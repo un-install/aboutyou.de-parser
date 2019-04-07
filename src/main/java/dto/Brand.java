@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import java.io.Serializable;
 
-//by un-install
+//by Yanetta
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Brand implements Serializable {
     @XmlAttribute
