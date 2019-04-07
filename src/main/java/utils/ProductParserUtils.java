@@ -1,8 +1,10 @@
 package utils;
 
 import com.google.gson.Gson;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import dto.ProductContainer;
 import dto.ProductResponse;
+import exception.EmptySearchResultException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -17,13 +19,18 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ProductParserUtils {
+    //Loging by un-install
     private static final Logger LOG = LogManager.getLogger(ProductParserUtils.class);
-
 
     //by Yanetta and mkharkhu
     public static void productResponsesFlushXml(List<ProductResponse> productsResponses) {
@@ -37,8 +44,7 @@ public class ProductParserUtils {
             //flash xml
             jaxbMarshaller.marshal(new ProductContainer(productsResponses), fileFactory("xml"));
             LOG.debug("end productResponsesFlushXml");
-        }
-        catch (JAXBException | IOException e) {
+        } catch (JAXBException | IOException e) {
             LOG.debug("productResponseFlushXml failed!!!");
             e.printStackTrace();
         }
@@ -69,18 +75,19 @@ public class ProductParserUtils {
     }
 
     //by un-install
-    public static ProductResponse productHtmlParser(String productUrl) throws IOException {
+    public static ProductResponse productHtmlParser(String productUrl) throws IOException, InterruptedException {
         LOG.debug("start productHtmlParser, productUrl=" + productUrl);
         //get html document
-        Document doc = Jsoup.connect(productUrl).followRedirects(false).get();
+        Document doc = Jsoup.connect(productUrl).get();
         ProductResponse productResponse;
 
         //collecting jsons
-        List<Element> productJson = doc.getElementsByAttributeValue("type", "application/ld+json").stream().
-                filter(json -> json.data().contains("\"@type\":\"Product\"")).collect(Collectors.toList());
+        List<Element> productJson = doc.body().getElementsByAttributeValue("type", "application/ld+json").stream().
+                filter(json -> json.data().contains("\"Product\"")).collect(Collectors.toList());
+        LOG.debug("productJson={}", productJson);
 
         //check json
-        if (productJson.size() != 0) {
+        if (!productJson.isEmpty()) {
             //setting values to ProductResponse from json
             productResponse = new Gson().fromJson(productJson.get(0).data(), ProductResponse.class);
 
@@ -101,12 +108,24 @@ public class ProductParserUtils {
         //get html document
         Document doc = Jsoup.connect(searchUrl).followRedirects(false).get();
 
-        //get hrefs to products
-        List<String> productUrls = doc.body().getElementsByAttributeValue("data-test-id", "ProductTileDefault")
-                .stream().map(div -> "https://www.aboutyou.de" + div.getElementsByTag("a").get(0).attr("href")).collect(Collectors.toList());
+        try {
+            if (!doc.getElementsByClass("_subline_54217").isEmpty()) {
+                throw new EmptySearchResultException("");
+            }
 
-        LOG.debug("end getSearchResultUrls, productUrls size=" + productUrls.size());
-        return productUrls;
+            //map hrefs to products
+            List<String> productUrls = doc.body().getElementsByAttributeValue("data-test-id", "ProductTileDefault")
+                    .stream().map(div -> "https://www.aboutyou.de" + div.getElementsByTag("a").get(0).attr("href")).collect(Collectors.toList());
+
+            LOG.debug("end getSearchResultUrls, productUrls size=" + productUrls.size());
+            return productUrls;
+
+        } catch (EmptySearchResultException e) {
+            LOG.debug("Terminating program: no results");
+            System.out.println("No Results");
+            System.exit(0);
+            return null;
+        }
     }
 
     //by un-install
@@ -117,7 +136,7 @@ public class ProductParserUtils {
                 .map(url -> {
                     try {
                         return productHtmlParser(url);
-                    } catch (IOException e) {
+                    } catch (IOException | InterruptedException e) {
                         e.printStackTrace();
                         return new ProductResponse();
                     }
@@ -139,10 +158,9 @@ public class ProductParserUtils {
         driver.findElement(By.className("_textInput_f8463")).sendKeys(keyword, Keys.ENTER);
 
         //getting url after redirection
-        while(driver.getCurrentUrl().equals("https://www.aboutyou.de/dein-shop")){
+        while (driver.getCurrentUrl().equals("https://www.aboutyou.de/dein-shop")) {
             TimeUnit.MILLISECONDS.sleep(100);
         }
-
         String searchUrl = driver.getCurrentUrl();
         driver.close();
 
@@ -150,4 +168,38 @@ public class ProductParserUtils {
         return searchUrl;
     }
 
+    //needs refactoring
+    //by un-install
+    public static List<String> getPageList(String searchResultUrl) throws IOException {
+        LOG.debug("start getPageList, searchResultUrl={}", searchResultUrl);
+        Document doc = Jsoup.connect(searchResultUrl).get();
+        List<String> pageUrls = new ArrayList<>();
+        pageUrls.add(searchResultUrl);
+
+        List<Element> paginationWrapper = doc.body().getElementsByClass("_paginationWrapper_fab66");
+        if (paginationWrapper.isEmpty()) {
+            return pageUrls;
+        }
+        List<Element> paggButtonsHrefs = paginationWrapper.get(0).getElementsByTag("a");
+        Element lastPaggButton = paggButtonsHrefs.get(paggButtonsHrefs.size() - 2);
+        int pcount = Integer.parseInt(lastPaggButton.text());
+        String url = lastPaggButton.attr("href");
+
+        AtomicInteger count = new AtomicInteger(2);
+        pageUrls.addAll(Stream.generate(() -> "https://www.aboutyou.de" + url.split("=")[0] + "=" + count.getAndIncrement()).limit(pcount - 1).collect(Collectors.toList()));
+        LOG.debug("end getPageList, pageUrls={}", pageUrls);
+        return pageUrls;
+    }
+
+    //by un-install
+    public static List<ProductResponse> getProductResponsesWithPagination(List<String> pageUrls, String keyword) {
+        return pageUrls.stream().map(url -> {
+            try {
+                return getProductResponses(url);
+            } catch (IOException e) {
+                e.printStackTrace();
+                return new ArrayList<ProductResponse>();
+            }
+        }).flatMap(prs -> prs.stream()).collect(Collectors.toList());
+    }
 }
