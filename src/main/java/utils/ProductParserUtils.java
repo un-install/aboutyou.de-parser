@@ -1,7 +1,6 @@
 package utils;
 
 import com.google.gson.Gson;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import dto.ProductContainer;
 import dto.ProductResponse;
 import exception.EmptySearchResultException;
@@ -19,9 +18,9 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -53,7 +52,7 @@ public class ProductParserUtils {
     //by un-install
     public static File fileFactory(String type) throws IOException {
         if (System.getProperty("os.name").contains("Windows")) {
-            return checkedCreateFile("C:\\aboutyou.de-parser\\output\\out." + type);
+            return checkedCreateFile("C:\\aboutyou.de-parser\\output\\" + "out-" + new SimpleDateFormat("dd-mm-yyyy").format(new Date()) + "." + type);
         } else {
             return checkedCreateFile("/etc/aboutyou.de-parser/output/out." + type);
         }
@@ -185,7 +184,7 @@ public class ProductParserUtils {
         String url = lastPaggButton.attr("href");
 
         AtomicInteger count = new AtomicInteger(2);
-        pageUrls.addAll(Stream.generate(() -> "https://www.aboutyou.de" + url.split("=")[0] + "=" + count.getAndIncrement()).limit(pcount - 1).collect(Collectors.toList()));
+        pageUrls.addAll(Stream.generate(() -> "https://www.aboutyou.de" + url.split("=")[0] + "=" + count.getAndIncrement()).limit(0).collect(Collectors.toList()));
         LOG.debug("end getPageList, pageUrls={}", pageUrls);
         return pageUrls;
     }
@@ -193,7 +192,7 @@ public class ProductParserUtils {
     //by un-install
     public static List<ProductResponse> getProductResponsesWithPagination(List<String> pageUrls) {
         LOG.debug("start getProductResponsesWithPagination, pageUrls", pageUrls);
-        return pageUrls.stream().map(url -> {
+        return pageUrls.stream().parallel().map(url -> {
             try {
                 return getProductResponses(url);
             } catch (IOException e) {
